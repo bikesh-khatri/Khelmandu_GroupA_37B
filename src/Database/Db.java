@@ -9,5 +9,7 @@ package Database;
  * @author khatr
  */
 public class Db {
+    public void test(){
+    }
     
 }
