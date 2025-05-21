@@ -15,6 +15,14 @@ public class Khelmandu_GroupA_37B {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+         login loginFrame = new login();
+         loginFrame.setVisible(true);
+         loginFrame.pack();
+         loginFrame.setLocationRelativeTo(null); 
+         Signup SignupFrame = new Signup();
+         SignupFrame.setVisible(true);
+         SignupFrame.pack();
+         SignupFrame.setLocationRelativeTo(null);
     }
     
 }
