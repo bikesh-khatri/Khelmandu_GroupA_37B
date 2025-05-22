@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package khelmandu_groupa_37b;
+package View;
+
+import khelmandu_groupa_37b.*;
+import java.awt.event.ActionListener;
 
 /**
  *
@@ -43,14 +46,14 @@ public class Signup extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        fname = new javax.swing.JTextField();
+        lname = new javax.swing.JTextField();
+        number = new javax.swing.JTextField();
+        password = new javax.swing.JTextField();
+        cpassword = new javax.swing.JTextField();
+        Signup = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        loginp = new javax.swing.JButton();
 
         Right1.setBackground(new java.awt.Color(163, 216, 211));
         Right1.setPreferredSize(new java.awt.Dimension(400, 500));
@@ -215,55 +218,55 @@ public class Signup extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(200, 200, 200));
         jLabel7.setText("Sign up");
 
-        jTextField2.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField2.setText("First name");
+        fname.setBackground(new java.awt.Color(204, 204, 204));
+        fname.setText("First name");
 
-        jTextField3.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField3.setText("Last name");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        lname.setBackground(new java.awt.Color(204, 204, 204));
+        lname.setText("Last name");
+        lname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                lnameActionPerformed(evt);
             }
         });
 
-        jTextField4.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField4.setText("Email or phone number");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        number.setBackground(new java.awt.Color(204, 204, 204));
+        number.setText("Phone number");
+        number.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                numberActionPerformed(evt);
             }
         });
 
-        jTextField5.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField5.setText("New password");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        password.setBackground(new java.awt.Color(204, 204, 204));
+        password.setText("New password");
+        password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                passwordActionPerformed(evt);
             }
         });
 
-        jTextField6.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField6.setText("Confirm password");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        cpassword.setBackground(new java.awt.Color(204, 204, 204));
+        cpassword.setText("Confirm password");
+        cpassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                cpasswordActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(149, 165, 166));
-        jButton3.setText("Sign up");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Signup.setBackground(new java.awt.Color(149, 165, 166));
+        Signup.setText("Sign up");
+        Signup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                SignupActionPerformed(evt);
             }
         });
 
         jLabel8.setForeground(new java.awt.Color(200, 200, 200));
         jLabel8.setText("Already have an account?");
 
-        jButton4.setBackground(new java.awt.Color(26, 60, 52));
-        jButton4.setForeground(new java.awt.Color(200, 200, 200));
-        jButton4.setText("Login");
+        loginp.setBackground(new java.awt.Color(26, 60, 52));
+        loginp.setForeground(new java.awt.Color(200, 200, 200));
+        loginp.setText("Login");
 
         javax.swing.GroupLayout RightLayout = new javax.swing.GroupLayout(Right);
         Right.setLayout(RightLayout);
@@ -274,25 +277,25 @@ public class Signup extends javax.swing.JFrame {
                     .addGroup(RightLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(number, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(password, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cpassword, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(76, 76, 76))
                     .addGroup(RightLayout.createSequentialGroup()
                         .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(RightLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(RightLayout.createSequentialGroup()
                                 .addGap(88, 88, 88)
-                                .addComponent(jButton3))
+                                .addComponent(Signup))
                             .addGroup(RightLayout.createSequentialGroup()
                                 .addGap(43, 43, 43)
                                 .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton4))
+                                .addComponent(loginp))
                             .addGroup(RightLayout.createSequentialGroup()
                                 .addGap(77, 77, 77)
                                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -306,20 +309,20 @@ public class Signup extends javax.swing.JFrame {
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(number, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
+                .addComponent(Signup)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(loginp, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE)
         );
@@ -350,25 +353,25 @@ public class Signup extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void lnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_lnameActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void numberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_numberActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_passwordActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void cpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_cpasswordActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void SignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_SignupActionPerformed
 
     /**
      * @param args the command line arguments
@@ -396,6 +399,13 @@ public class Signup extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Signup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -409,10 +419,11 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JPanel Left;
     private javax.swing.JPanel Right;
     private javax.swing.JPanel Right1;
+    private javax.swing.JButton Signup;
+    private javax.swing.JTextField cpassword;
+    private javax.swing.JTextField fname;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -426,10 +437,36 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    // End of variables declaration//GEN-END:variables
+    private javax.swing.JTextField lname;
+    private javax.swing.JButton loginp;
+    private javax.swing.JTextField number;
+    private javax.swing.JTextField password;
+    // End of variables declaration                   
+    // end of variables declaration//GEN-END:variables
+
+public void addAdduserListener(ActionListener listener) {
+    Signup.addActionListener(listener);
+}
+
+public void addloginlistener(ActionListener listener) {
+    loginp.addActionListener(listener);
+}
+
+
+public javax.swing.JTextField getnumber() {
+    return number;
+}
+
+
+public javax.swing.JTextField getpasswordfield() {
+    return password;
+}
+
+
+public javax.swing.JTextField getfnamefield() {
+    return fname;
+}
+public javax.swing.JTextField getlnamefield() {
+    return lname;
+}
 }
