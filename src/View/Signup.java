@@ -4,8 +4,10 @@
  */
 package View;
 
-import khelmandu_groupa_37b.*;
+import Khelmandu_GroupA_37B.*;
+import java.awt.Color;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -49,11 +51,11 @@ public class Signup extends javax.swing.JFrame {
         fname = new javax.swing.JTextField();
         lname = new javax.swing.JTextField();
         number = new javax.swing.JTextField();
-        password = new javax.swing.JTextField();
-        cpassword = new javax.swing.JTextField();
         Signup = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         loginp = new javax.swing.JButton();
+        password = new javax.swing.JPasswordField();
+        cpassword = new javax.swing.JPasswordField();
 
         Right1.setBackground(new java.awt.Color(163, 216, 211));
         Right1.setPreferredSize(new java.awt.Dimension(400, 500));
@@ -220,9 +222,25 @@ public class Signup extends javax.swing.JFrame {
 
         fname.setBackground(new java.awt.Color(204, 204, 204));
         fname.setText("First name");
+        fname.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                fnameFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                fnameFocusLost(evt);
+            }
+        });
 
         lname.setBackground(new java.awt.Color(204, 204, 204));
         lname.setText("Last name");
+        lname.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                lnameFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                lnameFocusLost(evt);
+            }
+        });
         lname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lnameActionPerformed(evt);
@@ -231,25 +249,17 @@ public class Signup extends javax.swing.JFrame {
 
         number.setBackground(new java.awt.Color(204, 204, 204));
         number.setText("Phone number");
+        number.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                numberFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                numberFocusLost(evt);
+            }
+        });
         number.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numberActionPerformed(evt);
-            }
-        });
-
-        password.setBackground(new java.awt.Color(204, 204, 204));
-        password.setText("New password");
-        password.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordActionPerformed(evt);
-            }
-        });
-
-        cpassword.setBackground(new java.awt.Color(204, 204, 204));
-        cpassword.setText("Confirm password");
-        cpassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpasswordActionPerformed(evt);
             }
         });
 
@@ -268,6 +278,28 @@ public class Signup extends javax.swing.JFrame {
         loginp.setForeground(new java.awt.Color(200, 200, 200));
         loginp.setText("Login");
 
+        password.setBackground(new java.awt.Color(204, 204, 204));
+        password.setText("Password");
+        password.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                passwordFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordFocusLost(evt);
+            }
+        });
+
+        cpassword.setBackground(new java.awt.Color(204, 204, 204));
+        cpassword.setText("Confirm password");
+        cpassword.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                cpasswordFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                cpasswordFocusLost(evt);
+            }
+        });
+
         javax.swing.GroupLayout RightLayout = new javax.swing.GroupLayout(Right);
         Right.setLayout(RightLayout);
         RightLayout.setHorizontalGroup(
@@ -276,10 +308,7 @@ public class Signup extends javax.swing.JFrame {
                 .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RightLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(number, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(password, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cpassword, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(number, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(76, 76, 76))
                     .addGroup(RightLayout.createSequentialGroup()
                         .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -298,7 +327,13 @@ public class Signup extends javax.swing.JFrame {
                                 .addComponent(loginp))
                             .addGroup(RightLayout.createSequentialGroup()
                                 .addGap(77, 77, 77)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(RightLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(RightLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(cpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -317,14 +352,14 @@ public class Signup extends javax.swing.JFrame {
                 .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(cpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(72, 72, 72)
                 .addComponent(Signup)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(loginp, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37))
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -361,17 +396,107 @@ public class Signup extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_numberActionPerformed
 
-    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordActionPerformed
-
-    private void cpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cpasswordActionPerformed
-
     private void SignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupActionPerformed
         // TODO add your handling code here:
+        // Check if passwords match
+        String pass = new String(password.getPassword());
+        String cpass = new String(cpassword.getPassword());
+        if (!pass.equals(cpass)) {
+            JOptionPane.showMessageDialog(this, "Passwords do not match");
+            return;
+        }
     }//GEN-LAST:event_SignupActionPerformed
+
+    private void fnameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fnameFocusGained
+        // TODO add your handling code here:
+            if (fname.getText().equals("First name")) {
+            fname.setForeground(Color.BLACK);
+            fname.setText("");
+        }
+    }//GEN-LAST:event_fnameFocusGained
+
+    private void fnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fnameFocusLost
+        // TODO add your handling code here:
+            if(fname.getText().isEmpty()){
+            fname.setForeground(Color.GRAY);
+            fname.setText("First name");
+        }
+    }//GEN-LAST:event_fnameFocusLost
+
+    private void lnameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lnameFocusGained
+        // TODO add your handling code here:
+        if (lname.getText().equals("Last name")) {
+            lname.setForeground(Color.BLACK);
+            lname.setText("");
+        }
+    }//GEN-LAST:event_lnameFocusGained
+
+    private void lnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lnameFocusLost
+        // TODO add your handling code here:
+       
+          if(lname.getText().isEmpty()){
+            lname.setForeground(Color.GRAY);
+            lname.setText("Last name");
+        }
+    }//GEN-LAST:event_lnameFocusLost
+
+    private void numberFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_numberFocusGained
+        // TODO add your handling code here:
+            if(number.getText().equals("Phone number")){
+            number.setForeground(Color.black);
+            number.setText("");
+        }
+    }//GEN-LAST:event_numberFocusGained
+
+    private void numberFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_numberFocusLost
+        // TODO add your handling code here:
+            if (number.getText().isEmpty() || number.getText().equals("Phone number")) {
+                number.setForeground(Color.GRAY);
+                number.setText("Phone number");
+            } else if (!number.getText().matches("\\d+")) {
+                JOptionPane.showMessageDialog(this, "Phone number must contain only digits");
+                number.setForeground(Color.GRAY);
+                number.setText("Phone number");
+            } else if (!number.getText().matches("\\d{10}")) {
+                JOptionPane.showMessageDialog(this, "Enter a valid 10-digit phone number");
+                number.setForeground(Color.GRAY);
+                number.setText("Phone number");
+            }
+    }//GEN-LAST:event_numberFocusLost
+
+    private void passwordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusGained
+        // TODO add your handling code here:
+             if(password.getText().equals("Password")){
+             password.setText("");
+             password.setEchoChar('*');
+        }
+    }//GEN-LAST:event_passwordFocusGained
+
+    private void cpasswordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cpasswordFocusLost
+        // TODO add your handling code here:
+        String cpass = new String(cpassword.getPassword());
+             if(cpassword.getText().isEmpty()){
+            cpassword.setText("Confirm password");
+            cpassword.setEchoChar((char)0);
+        }
+        
+    }//GEN-LAST:event_cpasswordFocusLost
+
+    private void passwordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusLost
+        // TODO add your handling code here:
+              if(password.getText().isEmpty()){
+            password.setText("Password");
+            password.setEchoChar((char)0);
+        }
+    }//GEN-LAST:event_passwordFocusLost
+
+    private void cpasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cpasswordFocusGained
+        // TODO add your handling code here:
+            if(cpassword.getText().equals("Confirm password")){
+             cpassword.setText("");
+             cpassword.setEchoChar('*');
+        }
+    }//GEN-LAST:event_cpasswordFocusGained
 
     /**
      * @param args the command line arguments
@@ -420,7 +545,7 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JPanel Right;
     private javax.swing.JPanel Right1;
     private javax.swing.JButton Signup;
-    private javax.swing.JTextField cpassword;
+    private javax.swing.JPasswordField cpassword;
     private javax.swing.JTextField fname;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -440,9 +565,8 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JTextField lname;
     private javax.swing.JButton loginp;
     private javax.swing.JTextField number;
-    private javax.swing.JTextField password;
-    // End of variables declaration                   
-    // end of variables declaration//GEN-END:variables
+    private javax.swing.JPasswordField password;
+    // End of variables declaration//GEN-END:variables
 
 public void addAdduserListener(ActionListener listener) {
     Signup.addActionListener(listener);
