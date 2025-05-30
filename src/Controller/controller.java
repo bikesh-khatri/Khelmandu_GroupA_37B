@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import Model.Userdata;
+import View.LogIn;
 import View.SignUp;
 
 
@@ -35,6 +36,7 @@ public class controller {
                 String lastName = userView.getLname();
                 String phoneNumber = userView.getNumber();
                 String pass = userView.getPassword();
+                String role = userView.getRole();
                  if (firstName.isEmpty() || firstName.equals("First name")) {
                     JOptionPane.showMessageDialog(null, "Please enter your first name");
                     return;
@@ -51,13 +53,18 @@ public class controller {
                     JOptionPane.showMessageDialog(null, "Please enter a password");
                     return;
                 }
-                Userdata user = new Userdata(firstName,lastName, Long.parseLong(phoneNumber), pass);
-                boolean check = Dao.checkuser(user);
-                if(check) {
+                Userdata user = new Userdata(firstName,lastName, Long.parseLong(phoneNumber), role,pass);
+                String check = Dao.checkuser(user.getPh_number());
+                if(!check.equals("null")) {
                     JOptionPane.showMessageDialog(userView,  "Duplicate user");
                 }
                 else {
-                    Dao.signup(user);
+                   if( Dao.signup(user)){
+                    LogIn loginPage = new LogIn();
+                    logInController Controller = new logInController(loginPage);
+                    Controller.open();
+                    close();
+                   };
                 }
             }
             catch (Exception ex) {

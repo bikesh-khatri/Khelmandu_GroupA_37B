@@ -8,6 +8,7 @@ package Controller;
 import Dao.Dao;
 
 import View.LogIn;
+import View.User_Dashboard;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -52,7 +53,17 @@ public class logInController {
                     JOptionPane.showMessageDialog(null, "Password is required.");
                     return;
                 }
-               userDao.logIn(phno, password);
+               int id = userDao.logIn(phno, password);
+               if(id != 0){
+                   if(userDao.checkuser(Long.parseLong(phno)).equals("Player")){
+                       
+                       User_Dashboard  dashboard = new User_Dashboard(id);
+                        userDashboardController c = new userDashboardController(dashboard);
+                        c.open();
+                        close();
+                   }
+                   
+               }
                 
             } catch (Exception ex) {
                 System.out.println("Error Loggig user: " + ex.getMessage());

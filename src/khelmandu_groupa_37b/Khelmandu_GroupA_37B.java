@@ -5,6 +5,8 @@
 package khelmandu_groupa_37b;
 import View.SignUp;
 import Controller.controller;
+import Controller.logInController;
+import View.LogIn;
 
 /**
  *
@@ -18,8 +20,8 @@ public class Khelmandu_GroupA_37B {
     public static void main(String[] args) {
         // TOD    public static void main(String[] args) {
  
-        SignUp signupForm = new SignUp();
-        controller Controller = new controller(signupForm);
+        LogIn loginPage = new LogIn();
+        logInController Controller = new logInController(loginPage);
         Controller.open();
     }    }
    
