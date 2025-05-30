@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package khelmandu_groupa_37b;
-import View.Signup;
+import View.SignUp;
 import Controller.controller;
 
 /**
@@ -18,7 +18,7 @@ public class Khelmandu_GroupA_37B {
     public static void main(String[] args) {
         // TOD    public static void main(String[] args) {
  
-        Signup signupForm = new Signup();
+        SignUp signupForm = new SignUp();
         controller Controller = new controller(signupForm);
         Controller.open();
     }    }
