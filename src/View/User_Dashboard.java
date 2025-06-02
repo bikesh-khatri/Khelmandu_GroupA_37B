@@ -35,73 +35,13 @@ public class User_Dashboard extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
-        Basketballvenue = new javax.swing.JPanel();
-        BasketBallVenueplaceholder1 = new javax.swing.JPanel();
-        Basketballvenueimg = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        BasketBallVenueplaceholder2 = new javax.swing.JPanel();
-        Basketballvenueimg2 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        FutsalVenue = new javax.swing.JPanel();
-        FutsalVenuePlaceholder1 = new javax.swing.JPanel();
-        Basketballvenueimg1 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        FutsalVenuePlaceholder2 = new javax.swing.JPanel();
-        Basketballvenueimg3 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        TableTennisVenue = new javax.swing.JPanel();
-        TTVenuePlaceholder1 = new javax.swing.JPanel();
-        Basketballvenueimg11 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        TTVenuePlaceholder2 = new javax.swing.JPanel();
-        Basketballvenueimg12 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
-        CricksalVenue = new javax.swing.JPanel();
-        CricksalVanuePlaceholder1 = new javax.swing.JPanel();
-        Basketballvenueimg7 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        CricksalVanuePlaceholder2 = new javax.swing.JPanel();
-        Basketballvenueimg8 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        BadmintonVenue = new javax.swing.JPanel();
-        BasketBallVenueplaceholder10 = new javax.swing.JPanel();
-        Basketballvenueimg9 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        BasketBallVenueplaceholder11 = new javax.swing.JPanel();
-        Basketballvenueimg10 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
+        FutsalVenue = new javax.swing.JButton();
+        BasketballVenue = new javax.swing.JButton();
+        TabletenninsVenue = new javax.swing.JButton();
+        CricksalVenue = new javax.swing.JButton();
+        BadmintonVenue = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1600, 800));
@@ -202,566 +142,54 @@ public class User_Dashboard extends javax.swing.JFrame {
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-
-        Basketballvenueimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/VenuePlaceholderImg.png"))); // NOI18N
-
-        jLabel3.setText("Name");
-
-        jLabel4.setText("Location");
-
-        jLabel5.setText("Price ");
-
-        jLabel6.setText("Status");
-
-        javax.swing.GroupLayout BasketBallVenueplaceholder1Layout = new javax.swing.GroupLayout(BasketBallVenueplaceholder1);
-        BasketBallVenueplaceholder1.setLayout(BasketBallVenueplaceholder1Layout);
-        BasketBallVenueplaceholder1Layout.setHorizontalGroup(
-            BasketBallVenueplaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BasketBallVenueplaceholder1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Basketballvenueimg, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                .addGroup(BasketBallVenueplaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49))
-        );
-        BasketBallVenueplaceholder1Layout.setVerticalGroup(
-            BasketBallVenueplaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BasketBallVenueplaceholder1Layout.createSequentialGroup()
-                .addGroup(BasketBallVenueplaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BasketBallVenueplaceholder1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Basketballvenueimg, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(BasketBallVenueplaceholder1Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel4)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel6)))
-                .addGap(68, 68, 68))
-        );
-
-        Basketballvenueimg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/VenuePlaceholderImg.png"))); // NOI18N
-
-        jLabel8.setText("Location ");
-
-        jLabel10.setText("Price ");
-
-        jLabel2.setText("Status");
-
-        jLabel7.setText("Name ");
-
-        javax.swing.GroupLayout BasketBallVenueplaceholder2Layout = new javax.swing.GroupLayout(BasketBallVenueplaceholder2);
-        BasketBallVenueplaceholder2.setLayout(BasketBallVenueplaceholder2Layout);
-        BasketBallVenueplaceholder2Layout.setHorizontalGroup(
-            BasketBallVenueplaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BasketBallVenueplaceholder2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Basketballvenueimg2)
-                .addGap(57, 57, 57)
-                .addGroup(BasketBallVenueplaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(BasketBallVenueplaceholder2Layout.createSequentialGroup()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(111, 111, 111)))
-                .addContainerGap())
-        );
-        BasketBallVenueplaceholder2Layout.setVerticalGroup(
-            BasketBallVenueplaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BasketBallVenueplaceholder2Layout.createSequentialGroup()
-                .addGroup(BasketBallVenueplaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BasketBallVenueplaceholder2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Basketballvenueimg2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(BasketBallVenueplaceholder2Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jLabel7)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel8)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)))
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout BasketballvenueLayout = new javax.swing.GroupLayout(Basketballvenue);
-        Basketballvenue.setLayout(BasketballvenueLayout);
-        BasketballvenueLayout.setHorizontalGroup(
-            BasketballvenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BasketballvenueLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(BasketballvenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(BasketBallVenueplaceholder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BasketBallVenueplaceholder2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        BasketballvenueLayout.setVerticalGroup(
-            BasketballvenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BasketballvenueLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(BasketBallVenueplaceholder2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BasketBallVenueplaceholder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        jTabbedPane2.addTab("Basketball", new javax.swing.ImageIcon(getClass().getResource("/View/Images/Basketballiconl.png")), Basketballvenue); // NOI18N
-
-        FutsalVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-
-        Basketballvenueimg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/VenuePlaceholderImg.png"))); // NOI18N
-
-        jLabel11.setText("Name");
-
-        jLabel12.setText("Location");
-
-        jLabel13.setText("Price ");
-
-        jLabel14.setText("Status");
-
-        javax.swing.GroupLayout FutsalVenuePlaceholder1Layout = new javax.swing.GroupLayout(FutsalVenuePlaceholder1);
-        FutsalVenuePlaceholder1.setLayout(FutsalVenuePlaceholder1Layout);
-        FutsalVenuePlaceholder1Layout.setHorizontalGroup(
-            FutsalVenuePlaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FutsalVenuePlaceholder1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Basketballvenueimg1, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
-                .addGroup(FutsalVenuePlaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49))
-        );
-        FutsalVenuePlaceholder1Layout.setVerticalGroup(
-            FutsalVenuePlaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FutsalVenuePlaceholder1Layout.createSequentialGroup()
-                .addGroup(FutsalVenuePlaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FutsalVenuePlaceholder1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel11)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel12)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel14))
-                    .addComponent(Basketballvenueimg1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        Basketballvenueimg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/VenuePlaceholderImg.png"))); // NOI18N
-
-        jLabel15.setText("Name");
-
-        jLabel16.setText("Location");
-
-        jLabel17.setText("Price ");
-
-        jLabel18.setText("Status");
-
-        javax.swing.GroupLayout FutsalVenuePlaceholder2Layout = new javax.swing.GroupLayout(FutsalVenuePlaceholder2);
-        FutsalVenuePlaceholder2.setLayout(FutsalVenuePlaceholder2Layout);
-        FutsalVenuePlaceholder2Layout.setHorizontalGroup(
-            FutsalVenuePlaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FutsalVenuePlaceholder2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Basketballvenueimg3, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addGroup(FutsalVenuePlaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49))
-        );
-        FutsalVenuePlaceholder2Layout.setVerticalGroup(
-            FutsalVenuePlaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FutsalVenuePlaceholder2Layout.createSequentialGroup()
-                .addGroup(FutsalVenuePlaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FutsalVenuePlaceholder2Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel15)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel16)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel17)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel18))
-                    .addComponent(Basketballvenueimg3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(74, 74, 74))
-        );
-
-        javax.swing.GroupLayout FutsalVenueLayout = new javax.swing.GroupLayout(FutsalVenue);
-        FutsalVenue.setLayout(FutsalVenueLayout);
-        FutsalVenueLayout.setHorizontalGroup(
-            FutsalVenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FutsalVenueLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(FutsalVenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FutsalVenueLayout.createSequentialGroup()
-                        .addComponent(FutsalVenuePlaceholder2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(FutsalVenueLayout.createSequentialGroup()
-                        .addComponent(FutsalVenuePlaceholder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(505, 505, 505))))
-        );
-        FutsalVenueLayout.setVerticalGroup(
-            FutsalVenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FutsalVenueLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(FutsalVenuePlaceholder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(FutsalVenuePlaceholder2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jTabbedPane2.addTab("Futsal", new javax.swing.ImageIcon(getClass().getResource("/View/Images/footballicon.png")), FutsalVenue); // NOI18N
-
-        Basketballvenueimg11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/VenuePlaceholderImg.png"))); // NOI18N
-
-        jLabel47.setText("Name");
-
-        jLabel48.setText("Location");
-
-        jLabel49.setText("Price ");
-
-        jLabel50.setText("Status");
-
-        javax.swing.GroupLayout TTVenuePlaceholder1Layout = new javax.swing.GroupLayout(TTVenuePlaceholder1);
-        TTVenuePlaceholder1.setLayout(TTVenuePlaceholder1Layout);
-        TTVenuePlaceholder1Layout.setHorizontalGroup(
-            TTVenuePlaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TTVenuePlaceholder1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Basketballvenueimg11, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addGroup(TTVenuePlaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel47, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel49, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel50, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49))
-        );
-        TTVenuePlaceholder1Layout.setVerticalGroup(
-            TTVenuePlaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TTVenuePlaceholder1Layout.createSequentialGroup()
-                .addGroup(TTVenuePlaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(TTVenuePlaceholder1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel47)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel48)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel49)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel50))
-                    .addComponent(Basketballvenueimg11, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        Basketballvenueimg12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/VenuePlaceholderImg.png"))); // NOI18N
-
-        jLabel51.setText("Name");
-
-        jLabel52.setText("Location");
-
-        jLabel53.setText("Price ");
-
-        jLabel54.setText("Status");
-
-        javax.swing.GroupLayout TTVenuePlaceholder2Layout = new javax.swing.GroupLayout(TTVenuePlaceholder2);
-        TTVenuePlaceholder2.setLayout(TTVenuePlaceholder2Layout);
-        TTVenuePlaceholder2Layout.setHorizontalGroup(
-            TTVenuePlaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TTVenuePlaceholder2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Basketballvenueimg12, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addGroup(TTVenuePlaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel52, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel51, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel53, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel54, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49))
-        );
-        TTVenuePlaceholder2Layout.setVerticalGroup(
-            TTVenuePlaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TTVenuePlaceholder2Layout.createSequentialGroup()
-                .addGroup(TTVenuePlaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(TTVenuePlaceholder2Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel51)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel52)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel53)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel54))
-                    .addComponent(Basketballvenueimg12, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout TableTennisVenueLayout = new javax.swing.GroupLayout(TableTennisVenue);
-        TableTennisVenue.setLayout(TableTennisVenueLayout);
-        TableTennisVenueLayout.setHorizontalGroup(
-            TableTennisVenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TableTennisVenueLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(TableTennisVenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(TableTennisVenueLayout.createSequentialGroup()
-                        .addComponent(TTVenuePlaceholder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(517, 517, 517))
-                    .addGroup(TableTennisVenueLayout.createSequentialGroup()
-                        .addComponent(TTVenuePlaceholder2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
-        );
-        TableTennisVenueLayout.setVerticalGroup(
-            TableTennisVenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TableTennisVenueLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(TTVenuePlaceholder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(TTVenuePlaceholder2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
-        );
-
-        jTabbedPane2.addTab("Table Tennis", new javax.swing.ImageIcon(getClass().getResource("/View/Images/tabletennisicon.png")), TableTennisVenue); // NOI18N
-
-        Basketballvenueimg7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/VenuePlaceholderImg.png"))); // NOI18N
-
-        jLabel31.setText("Name");
-
-        jLabel32.setText("Location");
-
-        jLabel33.setText("Price ");
-
-        jLabel34.setText("Status");
-
-        javax.swing.GroupLayout CricksalVanuePlaceholder1Layout = new javax.swing.GroupLayout(CricksalVanuePlaceholder1);
-        CricksalVanuePlaceholder1.setLayout(CricksalVanuePlaceholder1Layout);
-        CricksalVanuePlaceholder1Layout.setHorizontalGroup(
-            CricksalVanuePlaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CricksalVanuePlaceholder1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Basketballvenueimg7, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addGroup(CricksalVanuePlaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49))
-        );
-        CricksalVanuePlaceholder1Layout.setVerticalGroup(
-            CricksalVanuePlaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CricksalVanuePlaceholder1Layout.createSequentialGroup()
-                .addGroup(CricksalVanuePlaceholder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CricksalVanuePlaceholder1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel31)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel32)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel33)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel34))
-                    .addComponent(Basketballvenueimg7, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        Basketballvenueimg8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/VenuePlaceholderImg.png"))); // NOI18N
-
-        jLabel35.setText("Name");
-
-        jLabel36.setText("Location");
-
-        jLabel37.setText("Price ");
-
-        jLabel38.setText("Status");
-
-        javax.swing.GroupLayout CricksalVanuePlaceholder2Layout = new javax.swing.GroupLayout(CricksalVanuePlaceholder2);
-        CricksalVanuePlaceholder2.setLayout(CricksalVanuePlaceholder2Layout);
-        CricksalVanuePlaceholder2Layout.setHorizontalGroup(
-            CricksalVanuePlaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CricksalVanuePlaceholder2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Basketballvenueimg8, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
-                .addGroup(CricksalVanuePlaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel37, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel38, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49))
-        );
-        CricksalVanuePlaceholder2Layout.setVerticalGroup(
-            CricksalVanuePlaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CricksalVanuePlaceholder2Layout.createSequentialGroup()
-                .addGroup(CricksalVanuePlaceholder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CricksalVanuePlaceholder2Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel35)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel36)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel37)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel38))
-                    .addComponent(Basketballvenueimg8, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(74, 74, 74))
-        );
-
-        javax.swing.GroupLayout CricksalVenueLayout = new javax.swing.GroupLayout(CricksalVenue);
-        CricksalVenue.setLayout(CricksalVenueLayout);
-        CricksalVenueLayout.setHorizontalGroup(
-            CricksalVenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CricksalVenueLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(CricksalVenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CricksalVenueLayout.createSequentialGroup()
-                        .addComponent(CricksalVanuePlaceholder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(505, 505, 505))
-                    .addGroup(CricksalVenueLayout.createSequentialGroup()
-                        .addComponent(CricksalVanuePlaceholder2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        CricksalVenueLayout.setVerticalGroup(
-            CricksalVenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CricksalVenueLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(CricksalVanuePlaceholder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(CricksalVanuePlaceholder2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jTabbedPane2.addTab("Cricksal", new javax.swing.ImageIcon(getClass().getResource("/View/Images/cricksalicon.png")), CricksalVenue); // NOI18N
-
-        Basketballvenueimg9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/VenuePlaceholderImg.png"))); // NOI18N
-
-        jLabel39.setText("Name");
-
-        jLabel40.setText("Location");
-
-        jLabel41.setText("Price ");
-
-        jLabel42.setText("Status");
-
-        javax.swing.GroupLayout BasketBallVenueplaceholder10Layout = new javax.swing.GroupLayout(BasketBallVenueplaceholder10);
-        BasketBallVenueplaceholder10.setLayout(BasketBallVenueplaceholder10Layout);
-        BasketBallVenueplaceholder10Layout.setHorizontalGroup(
-            BasketBallVenueplaceholder10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BasketBallVenueplaceholder10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Basketballvenueimg9, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
-                .addGroup(BasketBallVenueplaceholder10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel39, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel41, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel42, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49))
-        );
-        BasketBallVenueplaceholder10Layout.setVerticalGroup(
-            BasketBallVenueplaceholder10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BasketBallVenueplaceholder10Layout.createSequentialGroup()
-                .addGroup(BasketBallVenueplaceholder10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BasketBallVenueplaceholder10Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel39)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel40)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel41)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel42))
-                    .addComponent(Basketballvenueimg9, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        Basketballvenueimg10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/VenuePlaceholderImg.png"))); // NOI18N
-
-        jLabel43.setText("Name");
-
-        jLabel44.setText("Location");
-
-        jLabel45.setText("Price ");
-
-        jLabel46.setText("Status");
-
-        javax.swing.GroupLayout BasketBallVenueplaceholder11Layout = new javax.swing.GroupLayout(BasketBallVenueplaceholder11);
-        BasketBallVenueplaceholder11.setLayout(BasketBallVenueplaceholder11Layout);
-        BasketBallVenueplaceholder11Layout.setHorizontalGroup(
-            BasketBallVenueplaceholder11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BasketBallVenueplaceholder11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Basketballvenueimg10, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
-                .addGroup(BasketBallVenueplaceholder11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel43, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel46, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49))
-        );
-        BasketBallVenueplaceholder11Layout.setVerticalGroup(
-            BasketBallVenueplaceholder11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BasketBallVenueplaceholder11Layout.createSequentialGroup()
-                .addGroup(BasketBallVenueplaceholder11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BasketBallVenueplaceholder11Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel43)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel44)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel45)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel46))
-                    .addComponent(Basketballvenueimg10, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout BadmintonVenueLayout = new javax.swing.GroupLayout(BadmintonVenue);
-        BadmintonVenue.setLayout(BadmintonVenueLayout);
-        BadmintonVenueLayout.setHorizontalGroup(
-            BadmintonVenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BadmintonVenueLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(BadmintonVenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BadmintonVenueLayout.createSequentialGroup()
-                        .addComponent(BasketBallVenueplaceholder10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(505, 505, 505))
-                    .addGroup(BadmintonVenueLayout.createSequentialGroup()
-                        .addComponent(BasketBallVenueplaceholder11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        BadmintonVenueLayout.setVerticalGroup(
-            BadmintonVenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BadmintonVenueLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(BasketBallVenueplaceholder11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BasketBallVenueplaceholder10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        jTabbedPane2.addTab("Badminton", new javax.swing.ImageIcon(getClass().getResource("/View/Images/Badminton.png")), BadmintonVenue); // NOI18N
+        FutsalVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
+        FutsalVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/footballicon.png"))); // NOI18N
+        FutsalVenue.setText("Futsal");
+        FutsalVenue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FutsalVenueActionPerformed(evt);
+            }
+        });
+
+        BasketballVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
+        BasketballVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Basketballiconl.png"))); // NOI18N
+        BasketballVenue.setText("Basketball");
+        BasketballVenue.setToolTipText("");
+        BasketballVenue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BasketballVenueActionPerformed(evt);
+            }
+        });
+
+        TabletenninsVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
+        TabletenninsVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/tabletennisicon.png"))); // NOI18N
+        TabletenninsVenue.setText("Table Tennis");
+        TabletenninsVenue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TabletenninsVenueActionPerformed(evt);
+            }
+        });
+
+        CricksalVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
+        CricksalVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/cricksalicon.png"))); // NOI18N
+        CricksalVenue.setText("Cricksal");
+        CricksalVenue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CricksalVenueActionPerformed(evt);
+            }
+        });
+
+        BadmintonVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
+        BadmintonVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Badminton.png"))); // NOI18N
+        BadmintonVenue.setText("Badminton");
+        BadmintonVenue.setToolTipText("");
+        BadmintonVenue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BadmintonVenueActionPerformed(evt);
+            }
+        });
+
+        jScrollPane1.setViewportView(jPanel3);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -769,34 +197,52 @@ public class User_Dashboard extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jButton7))
+                        .addGap(52, 52, 52)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BasketballVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TabletenninsVenue)
+                            .addComponent(FutsalVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BadmintonVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CricksalVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton8)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton8)))
-                .addGap(0, 1291, Short.MAX_VALUE))
+                        .addGap(60, 60, 60)
+                        .addComponent(jButton7)))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton8)
-                .addGap(95, 95, 95)
-                .addComponent(jButton7)
-                .addGap(14, 14, 14))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BasketballVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(FutsalVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(TabletenninsVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(CricksalVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(BadmintonVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton8)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton7)
+                        .addGap(23, 23, 23))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(25, Short.MAX_VALUE))))
         );
-
-        jTabbedPane2.getAccessibleContext().setAccessibleParent(jTabbedPane2);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -826,6 +272,26 @@ public class User_Dashboard extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void FutsalVenueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FutsalVenueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FutsalVenueActionPerformed
+
+    private void BasketballVenueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BasketballVenueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BasketballVenueActionPerformed
+
+    private void TabletenninsVenueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TabletenninsVenueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TabletenninsVenueActionPerformed
+
+    private void CricksalVenueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CricksalVenueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CricksalVenueActionPerformed
+
+    private void BadmintonVenueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BadmintonVenueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BadmintonVenueActionPerformed
 
     /**
      * @param args the command line arguments
@@ -863,81 +329,21 @@ public class User_Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel BadmintonVenue;
-    private javax.swing.JPanel BasketBallVenueplaceholder1;
-    private javax.swing.JPanel BasketBallVenueplaceholder10;
-    private javax.swing.JPanel BasketBallVenueplaceholder11;
-    private javax.swing.JPanel BasketBallVenueplaceholder2;
-    private javax.swing.JPanel Basketballvenue;
-    private javax.swing.JLabel Basketballvenueimg;
-    private javax.swing.JLabel Basketballvenueimg1;
-    private javax.swing.JLabel Basketballvenueimg10;
-    private javax.swing.JLabel Basketballvenueimg11;
-    private javax.swing.JLabel Basketballvenueimg12;
-    private javax.swing.JLabel Basketballvenueimg2;
-    private javax.swing.JLabel Basketballvenueimg3;
-    private javax.swing.JLabel Basketballvenueimg7;
-    private javax.swing.JLabel Basketballvenueimg8;
-    private javax.swing.JLabel Basketballvenueimg9;
-    private javax.swing.JPanel CricksalVanuePlaceholder1;
-    private javax.swing.JPanel CricksalVanuePlaceholder2;
-    private javax.swing.JPanel CricksalVenue;
-    private javax.swing.JPanel FutsalVenue;
-    private javax.swing.JPanel FutsalVenuePlaceholder1;
-    private javax.swing.JPanel FutsalVenuePlaceholder2;
+    private javax.swing.JButton BadmintonVenue;
+    private javax.swing.JButton BasketballVenue;
+    private javax.swing.JButton CricksalVenue;
+    private javax.swing.JButton FutsalVenue;
     private javax.swing.JButton HomeBtn;
-    private javax.swing.JPanel TTVenuePlaceholder1;
-    private javax.swing.JPanel TTVenuePlaceholder2;
-    private javax.swing.JPanel TableTennisVenue;
+    private javax.swing.JButton TabletenninsVenue;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    public javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
