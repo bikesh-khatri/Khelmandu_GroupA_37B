@@ -16,7 +16,7 @@ public class Dashboardcontroller {
  
         public Dashboardcontroller(User_Dashboard dashboardView){
             this.dashboardView = dashboardView;
-            dashboardView.addBasketballListener(new AddVenueListener("basketball"));
+            dashboardView.addBasketballListener(e -> new AddVenueListener("basketball"));
           dashboardView.addFutsalListener(e -> loadVenuesByType("futsal"));
           dashboardView.addCricksalListener(e -> loadVenuesByType("cricksal"));
           dashboardView.addTabletennisListener(e -> loadVenuesByType("tabletennis"));
@@ -31,6 +31,7 @@ class AddVenueListener implements ActionListener {
             this.venueType = venueType;
         }
     
+        @Override
         public void actionPerformed(ActionEvent e) {            
         try {                     
             loadVenuesByType(venueType);
