@@ -9,12 +9,12 @@ import java.awt.event.ActionListener;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Dashboardcontroller {
+public class userDashboardController {
     private final VenueDao venueDao = new VenueDao();
     private final User_Dashboard dashboardView;
   
  
-        public Dashboardcontroller(User_Dashboard dashboardView){
+        public userDashboardController(User_Dashboard dashboardView){
             this.dashboardView = dashboardView;
             dashboardView.addBasketballListener(e -> new AddVenueListener("basketball"));
           dashboardView.addFutsalListener(e -> loadVenuesByType("futsal"));
@@ -22,6 +22,13 @@ public class Dashboardcontroller {
           dashboardView.addTabletennisListener(e -> loadVenuesByType("tabletennis"));
             dashboardView.addBadmintonListener(new AddVenueListener("badminton"));
         }
+        public void open() {
+        this.dashboardView.setVisible(true);
+    }
+
+    public void close() {
+        this.dashboardView.dispose();
+    }
     
 class AddVenueListener implements ActionListener {        
                 
