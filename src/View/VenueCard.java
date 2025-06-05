@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
  *
  * @author admin
  */
-public class VenueCard extends javax.swing.JFrame {
+public class VenueCard extends javax.swing.JFrame{
 
     /**
      * Creates new form VenueCard1
@@ -36,8 +36,6 @@ public class VenueCard extends javax.swing.JFrame {
         price = new javax.swing.JLabel();
         status = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         image.setText("jLabel1");
 
         name.setText("jLabel2");
@@ -48,8 +46,8 @@ public class VenueCard extends javax.swing.JFrame {
 
         status.setText("jLabel5");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -85,7 +83,7 @@ public class VenueCard extends javax.swing.JFrame {
                 .addGap(59, 59, 59))
         );
 
-        pack();
+        getAccessibleContext().setAccessibleDescription("");
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -123,7 +121,6 @@ public class VenueCard extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel image;
     private javax.swing.JLabel location;
@@ -133,12 +130,17 @@ public class VenueCard extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
         public void setVenue(Venue venue){
-        name.setText("Name: " + venue.getVenueName());   
-        price.setText("Price: Rs " + venue.getVenuePrice());    
-        ImageIcon icon = new ImageIcon(venue.getVenueImage());    
-        Image img = icon.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);   
-        image.setIcon(new ImageIcon(img));
-        location.setText(venue.getVenueLocation());
+        name.setText("Name: " + venue.getVenueName());
+        location.setText("Location: " + venue.getVenueLocation());
+        price.setText("Price: Rs " + venue.getVenuePrice());
+        status.setText("Status: " + venue.getVenueStatus());
+        try {
+            ImageIcon icon = new ImageIcon(venue.getVenueImage());
+            Image img = icon.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
+            image.setIcon(new ImageIcon(img));
+        } catch (Exception e) {
+            image.setText("No Image");
+        }
         
     }
 }

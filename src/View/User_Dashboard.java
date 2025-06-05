@@ -4,6 +4,8 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author admin
@@ -41,7 +43,7 @@ public class User_Dashboard extends javax.swing.JFrame {
         CricksalVenue = new javax.swing.JButton();
         BadmintonVenue = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        venuePane = new javax.swing.JPanel();
+        venuePanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1600, 800));
@@ -189,7 +191,7 @@ public class User_Dashboard extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane1.setViewportView(venuePane);
+        jScrollPane1.setViewportView(venuePanel);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -344,9 +346,30 @@ public class User_Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JPanel venuePane;
+    private javax.swing.JPanel venuePanel;
     // End of variables declaration//GEN-END:variables
-
     
+    public javax.swing.JPanel getVenuePanel(){return venuePanel;}
+    
+    
+    public void addBasketballListener(ActionListener listener){
+        BasketballVenue.addActionListener(listener);
+    }
+
+    public void addCricksalListener(ActionListener listener){
+        CricksalVenue.addActionListener(listener);
+    }
+
+    public void addFutsalListener(ActionListener listener){
+        FutsalVenue.addActionListener(listener);
+    }
+
+    public void addTabletennisListener(ActionListener listener){
+        TabletenninsVenue.addActionListener(listener);
+    }
+
+    public void addBadmintonListener(ActionListener listener){
+        BadmintonVenue.addActionListener(listener);
+    }
 
 }

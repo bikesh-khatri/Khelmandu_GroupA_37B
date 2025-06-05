@@ -11,6 +11,7 @@ package Model;
 public class Venue {
    private String venueName;
 
+
    public String getVenueName() {
     return venueName;
    }
@@ -29,13 +30,13 @@ public class Venue {
     this.venueLocation = venueLocation;
    }
 
-   private String venuePrice;
+   private int venuePrice;
 
-   public String getVenuePrice() {
+   public int getVenuePrice() {
     return venuePrice;
    }
 
-   public void setVenuePrice(String venuePrice) {
+   public void setVenuePrice(int venuePrice) {
     this.venuePrice = venuePrice;
    }
 
@@ -57,5 +58,13 @@ public class Venue {
 
    public void setVenueImage(String venueImage) {
     this.venueImage = venueImage;
+   }
+
+   public Venue(String venueName,String venueImage,String venueStatus, String venueLocation, int venuePrice){
+      this.venueImage = venueImage;
+      this.venueLocation = venueLocation;
+      this.venueName = venueName;
+      this.venueStatus = venueStatus;
+      this.venuePrice = venuePrice;
    }
 }
