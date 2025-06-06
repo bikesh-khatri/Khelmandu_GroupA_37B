@@ -3,6 +3,7 @@ package Controller;
 import Dao.VenueDao;
 import Model.Venue;
 import View.User_Dashboard;
+
 import View.VenueCard;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,7 +17,7 @@ public class userDashboardController {
  
         public userDashboardController(User_Dashboard dashboardView){
             this.dashboardView = dashboardView;
-            dashboardView.addBasketballListener(e -> new AddVenueListener("basketball"));
+            dashboardView.addBasketballListener( new AddVenueListener("basketball"));
           dashboardView.addFutsalListener(e -> loadVenuesByType("futsal"));
           dashboardView.addCricksalListener(e -> loadVenuesByType("cricksal"));
           dashboardView.addTabletennisListener(e -> loadVenuesByType("tabletennis"));
@@ -54,17 +55,14 @@ class AddVenueListener implements ActionListener {
             dashboardView.getVenuePanel().removeAll();
 
             for (Venue venue : venues) {
-               
                     VenueCard card = new VenueCard(); // custom JPanel
                     card.setVenue(venue);
-                    dashboardView.getVenuePanel().add(card);
-                
-            
-
-            dashboardView.getVenuePanel().revalidate();
-            dashboardView.getVenuePanel().repaint();
+                    dashboardView.venuePanel.add(card);
+                    
       
     }
+            dashboardView.getVenuePanel().revalidate();
+            dashboardView.getVenuePanel().repaint();
 
 
 }

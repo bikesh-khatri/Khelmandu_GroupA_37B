@@ -22,17 +22,17 @@ public class VenueDao {
     public List<Venue> getVenuesByType(String type) {
     List<Venue> venues = new ArrayList<>();
     Connection conn = mysql.openConnection(); 
-    String sql = "SELECT * FROM venue_details WHERE Type = ?";
+    String sql = "SELECT * FROM venue_details WHERE venue_type = ?";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {   
             pstmt.setString(1, type);
             ResultSet rs = pstmt.executeQuery();        
             while (rs.next()) {            
                 Venue venue = new Venue(
-                         rs.getString("venue_name"),                 // int venuePrice
-                         rs.getString("image"),              // String venueName
-                         rs.getString("venue_status"),          // String venueLocation
-                         rs.getString("location"),            // String venueStatus
-                         rs.getInt("price")              // String venueImage
+                         rs.getString("venue_name"),              
+                         rs.getString("image"),              
+                         rs.getString("venue_status"),          // 
+                         rs.getString("location"),            //  
+                         rs.getInt("price")              //  
                         );
                 venues.add(venue);        
             }    

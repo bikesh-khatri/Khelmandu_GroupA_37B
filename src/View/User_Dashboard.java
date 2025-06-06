@@ -17,7 +17,9 @@ public class User_Dashboard extends javax.swing.JFrame {
      */
     public User_Dashboard(int id) {
         initComponents();
-        setValue(id);
+        venuePanel.setLayout(new javax.swing.BoxLayout(venuePanel, javax.swing.BoxLayout.Y_AXIS));
+        venuePanel.setPreferredSize(null);
+       
     }
 
     /**
@@ -53,7 +55,7 @@ public class User_Dashboard extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(1600, 600));
         jPanel1.setPreferredSize(new java.awt.Dimension(1400, 600));
 
-        jButton8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 2, 14)); // NOI18N
+        jButton8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         jButton8.setText("View Rules");
         jButton8.setBorderPainted(false);
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -145,47 +147,57 @@ public class User_Dashboard extends javax.swing.JFrame {
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
+        FutsalVenue.setBackground(new java.awt.Color(204, 204, 204));
         FutsalVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         FutsalVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/footballicon.png"))); // NOI18N
         FutsalVenue.setText("Futsal");
+        FutsalVenue.setBorder(null);
         FutsalVenue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FutsalVenueActionPerformed(evt);
             }
         });
 
+        BasketballVenue.setBackground(new java.awt.Color(204, 204, 204));
         BasketballVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         BasketballVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Basketballiconl.png"))); // NOI18N
         BasketballVenue.setText("Basketball");
         BasketballVenue.setToolTipText("");
+        BasketballVenue.setBorder(null);
         BasketballVenue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BasketballVenueActionPerformed(evt);
             }
         });
 
+        TabletenninsVenue.setBackground(new java.awt.Color(204, 204, 204));
         TabletenninsVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         TabletenninsVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/tabletennisicon.png"))); // NOI18N
         TabletenninsVenue.setText("Table Tennis");
+        TabletenninsVenue.setBorder(null);
         TabletenninsVenue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TabletenninsVenueActionPerformed(evt);
             }
         });
 
+        CricksalVenue.setBackground(new java.awt.Color(204, 204, 204));
         CricksalVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         CricksalVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/cricksalicon.png"))); // NOI18N
         CricksalVenue.setText("Cricksal");
+        CricksalVenue.setBorder(null);
         CricksalVenue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CricksalVenueActionPerformed(evt);
             }
         });
 
+        BadmintonVenue.setBackground(new java.awt.Color(204, 204, 204));
         BadmintonVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         BadmintonVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Badminton.png"))); // NOI18N
         BadmintonVenue.setText("Badminton");
         BadmintonVenue.setToolTipText("");
+        BadmintonVenue.setBorder(null);
         BadmintonVenue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BadmintonVenueActionPerformed(evt);
@@ -205,15 +217,15 @@ public class User_Dashboard extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(52, 52, 52)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BasketballVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TabletenninsVenue)
-                            .addComponent(FutsalVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BadmintonVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CricksalVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton8)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(BasketballVenue, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(FutsalVenue, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(BadmintonVenue, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(CricksalVenue, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(jButton8)
+                            .addComponent(TabletenninsVenue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
+                        .addGap(72, 72, 72)
                         .addComponent(jButton7)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1)
@@ -317,7 +329,7 @@ public class User_Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JPanel venuePanel;
+    public javax.swing.JPanel venuePanel;
     // End of variables declaration//GEN-END:variables
     public void setValue(int id){
         jLabel1.setText(Integer.toString(id));
