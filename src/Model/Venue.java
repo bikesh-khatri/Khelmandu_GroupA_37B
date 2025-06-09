@@ -60,11 +60,22 @@ public class Venue {
     this.venueImage = venueImage;
    }
 
-   public Venue(String venueName,String venueImage,String venueStatus, String venueLocation, int venuePrice){
+   private int venue_id;
+
+   public int getVenue_id() {
+        return venue_id;
+    }
+
+   public void setVenue_id(int venue_id) {
+        this.venue_id = venue_id;
+    }
+
+   public Venue(String venueName,String venueImage,String venueStatus, String venueLocation, int venuePrice, int venue_id){
       this.venueImage = venueImage;
       this.venueLocation = venueLocation;
       this.venueName = venueName;
       this.venueStatus = venueStatus;
       this.venuePrice = venuePrice;
+      this.venue_id = venue_id;
    }
 }
