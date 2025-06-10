@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Dao;
+import Database.MySqlConnection;
 import java.sql.*;
 import Model.Booking;
 /**
@@ -12,13 +13,9 @@ import Model.Booking;
 public class BookingDao {
     
 
-    private Connection conn;
-
-    public BookingDao(Connection conn) {
-        this.conn = conn;
-    }
-
-    public boolean insertBooking(Booking booking) throws SQLException {
+    MySqlConnection mysql = new MySqlConnection();
+    public boolean insertBooking(Booking booking){
+        Connection conn = mysql.openConnection(); 
         String sql = "INSERT INTO bookings (card_id, booking_date, time_slot, payment_type) VALUES (?, ?, ?, ?)";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, booking.getVenue_id());
@@ -26,8 +23,14 @@ public class BookingDao {
             stmt.setString(3, booking.getTimeSlot());
             stmt.setString(4, booking.getPaymentType());
             return stmt.executeUpdate() > 0;
-        }
-    }
 }
-    
-
+        catch(SQLException ex){
+            ex.printStackTrace();
+        }
+        finally{
+            mysql.closeConnection(conn);
+        }
+        return false;
+        
+}    
+}

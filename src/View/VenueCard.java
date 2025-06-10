@@ -14,12 +14,16 @@ import javax.swing.ImageIcon;
  * @author admin
  */
 public class VenueCard extends javax.swing.JPanel {
-private int venue_id;
+private Venue venue;
+private int userID;
     /**
      * Creates new form VenueCard
      */
-    public VenueCard() {
+    public VenueCard(Venue venue, int userID) {
+        this.venue = venue;
+        this.userID = userID;
         initComponents();
+        setVenue();
     }
 
     /**
@@ -98,9 +102,8 @@ private int venue_id;
     private javax.swing.JLabel price;
     private javax.swing.JLabel status;
     // End of variables declaration//GEN-END:variables
- public void setVenue(Venue venue){
+ public void setVenue(){
         System.out.println(venue.getVenueName());
-        this.venue_id = venue.getVenue_id();
         name.setText("Name: " + venue.getVenueName());
         location.setText("Location: " + venue.getVenueLocation());
         price.setText("Price: Rs " + venue.getVenuePrice());
@@ -118,8 +121,6 @@ private int venue_id;
         Bookbtn.addActionListener(listener);
     }
     
-    public int getVenueId(){
-        return this.venue_id;
-    }
+  
 
 }
