@@ -58,7 +58,7 @@ public class logInController {
                    if(userDao.checkuser(Long.parseLong(phno)).equals("Player")){
                        
                        User_Dashboard  dashboard = new User_Dashboard(id);
-                        userDashboardController c = new userDashboardController(dashboard);
+                        userDashboardController c = new userDashboardController(dashboard,id);
                         c.open();
                         close();
                    }

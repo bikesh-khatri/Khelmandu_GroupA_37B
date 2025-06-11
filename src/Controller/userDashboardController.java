@@ -22,10 +22,12 @@ import javax.swing.SwingUtilities;
 public class userDashboardController {
     private final VenueDao venueDao = new VenueDao();
     private final User_Dashboard dashboardView;
+    private int userID;
   
  
-        public userDashboardController(User_Dashboard dashboardView){
+        public userDashboardController(User_Dashboard dashboardView,int id){
             this.dashboardView = dashboardView;
+            this.userID = id;
             dashboardView.addBasketballListener(e -> new AddVenueListener("basketball"));
           dashboardView.addFutsalListener(e -> loadVenuesByType("futsal"));
           dashboardView.addCricksalListener(e -> loadVenuesByType("cricksal"));
@@ -70,15 +72,15 @@ class AddVenueListener implements ActionListener {
 
             for (Venue venue : venues) {
                
-                    VenueCard card = new VenueCard(); 
-                    card.setVenue(venue);
+                    VenueCard card = new VenueCard(venue,userID); 
+                    
                     dashboardView.getVenuePanel().add(card);
                     JSeparator separator = new JSeparator(SwingConstants.VERTICAL);
                     separator.setPreferredSize(new Dimension(dashboardView.getVenuePanel().getWidth(), 10));
                     dashboardView.getVenuePanel().add(separator);
                     card.addBookingListener(e -> {
                         JFrame parent = (JFrame) SwingUtilities.getWindowAncestor(card);
-                        BookingDialog dialog = new BookingDialog(parent,card.getVenueId());
+                        BookingDialog dialog = new BookingDialog(parent,card.venue.getVenue_id());
                            dialog.setVisible(true);
                      });
                     
