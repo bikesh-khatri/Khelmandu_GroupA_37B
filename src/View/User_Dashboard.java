@@ -4,6 +4,7 @@
  */
 package View;
 
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
@@ -17,7 +18,9 @@ public class User_Dashboard extends javax.swing.JFrame {
      */
     public User_Dashboard(int id) {
         initComponents();
-        setValue(id);
+        venuePanel.setLayout(new javax.swing.BoxLayout(venuePanel, javax.swing.BoxLayout.Y_AXIS));
+        venuePanel.setPreferredSize(null);
+        
     }
 
     /**
@@ -114,13 +117,6 @@ public class User_Dashboard extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -161,10 +157,12 @@ public class User_Dashboard extends javax.swing.JFrame {
             }
         });
 
+        BasketballVenue.setBackground(new java.awt.Color(204, 204, 204));
         BasketballVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         BasketballVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Basketballiconl.png"))); // NOI18N
         BasketballVenue.setText("Basketball");
         BasketballVenue.setToolTipText("");
+        BasketballVenue.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         BasketballVenue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BasketballVenueActionPerformed(evt);
@@ -199,6 +197,7 @@ public class User_Dashboard extends javax.swing.JFrame {
             }
         });
 
+        venuePanel.setBackground(new java.awt.Color(203, 200, 200));
         jScrollPane1.setViewportView(venuePanel);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -222,7 +221,7 @@ public class User_Dashboard extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(60, 60, 60)
                         .addComponent(jButton7)))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1)
                 .addContainerGap())
         );
@@ -319,7 +318,6 @@ public class User_Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -350,5 +348,6 @@ public class User_Dashboard extends javax.swing.JFrame {
     public void addBadmintonListener(ActionListener listener){
         BadmintonVenue.addActionListener(listener);
     }
+    
 
 }
