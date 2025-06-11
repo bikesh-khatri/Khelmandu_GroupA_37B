@@ -80,7 +80,7 @@ class AddVenueListener implements ActionListener {
                     dashboardView.getVenuePanel().add(separator);
                     card.addBookingListener(e -> {
                         JFrame parent = (JFrame) SwingUtilities.getWindowAncestor(card);
-                        BookingDialog dialog = new BookingDialog(parent,card.getVenueId());
+                        BookingDialog dialog = new BookingDialog(parent,card.venue.getVenue_id());
                            dialog.setVisible(true);
                      });
                     

@@ -58,6 +58,7 @@ public class User_Dashboard extends javax.swing.JFrame {
 
         jButton8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 2, 14)); // NOI18N
         jButton8.setText("View Rules");
+        jButton8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jButton8.setBorderPainted(false);
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,12 +68,8 @@ public class User_Dashboard extends javax.swing.JFrame {
 
         jButton7.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
         jButton7.setText("Sign Out");
+        jButton7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jButton7.setBorderPainted(false);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -151,6 +148,7 @@ public class User_Dashboard extends javax.swing.JFrame {
         FutsalVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         FutsalVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/footballicon.png"))); // NOI18N
         FutsalVenue.setText("Futsal");
+        FutsalVenue.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         FutsalVenue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FutsalVenueActionPerformed(evt);
@@ -162,7 +160,7 @@ public class User_Dashboard extends javax.swing.JFrame {
         BasketballVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Basketballiconl.png"))); // NOI18N
         BasketballVenue.setText("Basketball");
         BasketballVenue.setToolTipText("");
-        BasketballVenue.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        BasketballVenue.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         BasketballVenue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BasketballVenueActionPerformed(evt);
@@ -172,6 +170,7 @@ public class User_Dashboard extends javax.swing.JFrame {
         TabletenninsVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         TabletenninsVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/tabletennisicon.png"))); // NOI18N
         TabletenninsVenue.setText("Table Tennis");
+        TabletenninsVenue.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         TabletenninsVenue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TabletenninsVenueActionPerformed(evt);
@@ -181,6 +180,7 @@ public class User_Dashboard extends javax.swing.JFrame {
         CricksalVenue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         CricksalVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/cricksalicon.png"))); // NOI18N
         CricksalVenue.setText("Cricksal");
+        CricksalVenue.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         CricksalVenue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CricksalVenueActionPerformed(evt);
@@ -191,6 +191,7 @@ public class User_Dashboard extends javax.swing.JFrame {
         BadmintonVenue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Badminton.png"))); // NOI18N
         BadmintonVenue.setText("Badminton");
         BadmintonVenue.setToolTipText("");
+        BadmintonVenue.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         BadmintonVenue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BadmintonVenueActionPerformed(evt);
@@ -211,17 +212,22 @@ public class User_Dashboard extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(52, 52, 52)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(BasketballVenue, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(FutsalVenue, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(BadmintonVenue, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(CricksalVenue, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(TabletenninsVenue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BasketballVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TabletenninsVenue)
-                            .addComponent(FutsalVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BadmintonVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CricksalVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton8)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jButton7)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButton7)
+                                .addGap(57, 57, 57)))))
                 .addComponent(jScrollPane1)
                 .addContainerGap())
         );
@@ -245,9 +251,9 @@ public class User_Dashboard extends javax.swing.JFrame {
                         .addComponent(BadmintonVenue, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton8)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton7)
-                        .addGap(23, 23, 23))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(25, Short.MAX_VALUE))))
@@ -265,14 +271,6 @@ public class User_Dashboard extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
@@ -301,6 +299,10 @@ public class User_Dashboard extends javax.swing.JFrame {
     private void BadmintonVenueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BadmintonVenueActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BadmintonVenueActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments

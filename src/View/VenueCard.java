@@ -14,7 +14,7 @@ import javax.swing.ImageIcon;
  * @author admin
  */
 public class VenueCard extends javax.swing.JPanel {
-private Venue venue;
+public Venue venue;
 private int userID;
     /**
      * Creates new form VenueCard
