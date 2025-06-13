@@ -1,5 +1,6 @@
 CREATE DATABASE Khelmandu;
 USE Khelmandu;
+
 CREATE TABLE users(
 id int auto_increment primary key,
 f_name varchar(20),

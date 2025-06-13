@@ -68,7 +68,9 @@ public class logInController {
                    close();
                    
                }else if (role.equals("Player")){
+                   System.out.println("role is admin");
                    User_Dashboard dashboard = new User_Dashboard(id);
+                   System.out.println("view called");
                    userDashboardController c = new userDashboardController(dashboard, id);
                    c.open();
                    close();

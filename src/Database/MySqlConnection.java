@@ -20,7 +20,7 @@ try {
 
 String username = "root";
 
-String password = "itisadmin";
+String password = "bikki123";
 
 String database = "khelmandu";
 
