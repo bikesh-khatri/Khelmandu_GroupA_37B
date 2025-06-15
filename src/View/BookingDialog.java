@@ -4,21 +4,29 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerDateModel;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
+
 
 /**
  *
  * @author admin
  */
 public class BookingDialog extends javax.swing.JDialog {
-
     /**
      * Creates new form BookingDialog
+     * @param parent
+     * @param venueId
+     * @param userId
      */
-    public BookingDialog(JFrame parent,int venueId) {
+    public BookingDialog() {
         initComponents();
+        
     }
 
     /**
@@ -36,7 +44,7 @@ public class BookingDialog extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         Timeslot = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        Bookbtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(51, 255, 51));
@@ -69,11 +77,11 @@ public class BookingDialog extends javax.swing.JDialog {
 
         Timeslot.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6:00 AM - 7:00 AM", " ", "7:00 AM – 8:00 AM", " ", "8:00 AM – 9:00 AM", " ", "9:00 AM – 10:00 AM", " ", "10:00 AM – 11:00 AM", " ", "11:00 AM – 12:00 PM", " ", "12:00 PM – 1:00 PM", " ", "1:00 PM – 2:00 PM", " ", "2:00 PM – 3:00 PM", " ", "3:00 PM – 4:00 PM", " ", "4:00 PM – 5:00 PM", " ", "5:00 PM – 6:00 PM", " ", "6:00 PM – 7:00 PM", " ", "7:00 PM – 8:00 PM", " " }));
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setText("Confirm Booking");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Bookbtn.setBackground(new java.awt.Color(204, 204, 204));
+        Bookbtn.setText("Confirm Booking");
+        Bookbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BookbtnActionPerformed(evt);
             }
         });
 
@@ -89,7 +97,7 @@ public class BookingDialog extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(Bookbtn)
                         .addContainerGap(201, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(9, 9, 9)
@@ -120,7 +128,7 @@ public class BookingDialog extends javax.swing.JDialog {
                             .addComponent(dateSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Timeslot, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(42, 42, 42)
-                .addComponent(jButton1)
+                .addComponent(Bookbtn)
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
@@ -133,64 +141,40 @@ public class BookingDialog extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_paymentTypeActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BookbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookbtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BookbtnActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BookingDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BookingDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BookingDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BookingDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run(int venueId) {
-                BookingDialog dialog = new BookingDialog(new javax.swing.JFrame(), venueId);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-
-            @Override
-            public void run() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Bookbtn;
     private javax.swing.JComboBox<String> Timeslot;
     private javax.swing.JSpinner dateSpinner;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JComboBox<String> paymentType;
     // End of variables declaration//GEN-END:variables
+    
+    public void addBookBtnListener(ActionListener listener){
+        Bookbtn.addActionListener(listener);
+    }
+
+  public java.sql.Date getSelectedDate() {
+    java.util.Date utilDate = (Date) dateSpinner.getValue();
+    return new java.sql.Date(utilDate.getTime());
+}
+
+    public String getSelectedPaymentMethod() {
+    return (String) paymentType.getSelectedItem();
+    }
+
+    public String getSelectedTimeSlot() {
+    return (String) Timeslot.getSelectedItem();
+    }
+
 }
