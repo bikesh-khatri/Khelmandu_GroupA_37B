@@ -20,9 +20,9 @@ try {
 
 String username = "root";
 
-String password = "bikki123";
+String password = "Narayan@123";
 
-String database = "khelmandu";
+String database = "Khelmandu_managementt_system";
 
 Connection connection;
 

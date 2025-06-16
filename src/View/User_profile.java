@@ -4,6 +4,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author khatr
@@ -152,7 +154,32 @@ public class User_profile extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
-        // TODO add your handling code here:
+        // Assuming you have the user's actual password stored somewhere
+        // e.g., fetched when the user logged in, here I'll hardcode for demo
+        String actualPassword = "user123"; // Replace this with your actual password variable
+//        boolean actualPassword  = Dao.deleteUserById(userId);
+
+        // Show password input dialog for confirmation
+        String inputPassword = JOptionPane.showInputDialog(this, "Enter your password to confirm deletion:");
+
+        if (inputPassword != null) { // if user didn't cancel
+            if (inputPassword.equals(actualPassword)) {
+                // Password matches — proceed with deletion
+                JOptionPane.showMessageDialog(this, "Account is deleted. Logging out...");
+
+                // Redirect to Login page
+                // Assuming Login is a JFrame named LoginFrame
+                LogIn login = new LogIn();
+                login.setVisible(true);
+
+                javax.swing.SwingUtilities.getWindowAncestor(this).dispose(); // Close current window/panel
+
+                // Optionally: Delete user from database here (if you have DB connected)
+            } else {
+                // Password doesn't match
+                JOptionPane.showMessageDialog(this, "Incorrect password. Deletion cancelled.");
+            }
+        }
     }//GEN-LAST:event_DeleteActionPerformed
 
     private void EditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditActionPerformed

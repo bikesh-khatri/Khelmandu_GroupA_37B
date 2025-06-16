@@ -109,4 +109,39 @@ public class Dao {
         return 0;
     }
     
+        // Fetch password for a user by ID
+    public String getPasswordById(int userId) {
+        Connection conn = mysql.openConnection();
+        String sql = "SELECT password FROM users WHERE id = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, userId);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                return rs.getString("password");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Dao.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            mysql.closeConnection(conn);
+        }
+        return null;
+    }
+
+    // Delete user by ID
+    public boolean deleteUserById(int userId) {
+        Connection conn = mysql.openConnection();
+        String sql = "DELETE FROM users WHERE id = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, userId);
+            int rowsAffected = pstmt.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException ex) {
+            Logger.getLogger(Dao.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            mysql.closeConnection(conn);
+        }
+        return false;
+    }
+
+    
 }
