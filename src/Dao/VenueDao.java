@@ -46,4 +46,3 @@ public class VenueDao {
         return venues;
 }
 }
-
