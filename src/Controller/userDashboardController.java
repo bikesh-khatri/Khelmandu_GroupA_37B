@@ -22,16 +22,16 @@ import javax.swing.SwingUtilities;
 public class userDashboardController {
     private final VenueDao venueDao = new VenueDao();
     private final User_Dashboard dashboardView;
-    private int userID;
+    private final int userID;
   
  
         public userDashboardController(User_Dashboard dashboardView,int id){
             this.dashboardView = dashboardView;
             this.userID = id;
-            dashboardView.addBasketballListener(e -> new AddVenueListener("basketball"));
-          dashboardView.addFutsalListener(e -> loadVenuesByType("futsal"));
-          dashboardView.addCricksalListener(e -> loadVenuesByType("cricksal"));
-          dashboardView.addTabletennisListener(e -> loadVenuesByType("tabletennis"));
+            dashboardView.addBasketballListener(new AddVenueListener("basketball"));
+          dashboardView.addFutsalListener(new AddVenueListener("futsal"));
+          dashboardView.addCricksalListener(new AddVenueListener("cricksal"));
+          dashboardView.addTabletennisListener(new AddVenueListener("tabletennis"));
             dashboardView.addBadmintonListener(new AddVenueListener("badminton"));
         }
 public void open(){        
@@ -47,7 +47,7 @@ public void close() {
     
 class AddVenueListener implements ActionListener {        
                 
-        private String venueType;
+        private final String venueType;
 
         public AddVenueListener(String venueType) {
             this.venueType = venueType;
@@ -78,11 +78,12 @@ class AddVenueListener implements ActionListener {
                     JSeparator separator = new JSeparator(SwingConstants.VERTICAL);
                     separator.setPreferredSize(new Dimension(dashboardView.getVenuePanel().getWidth(), 10));
                     dashboardView.getVenuePanel().add(separator);
-                    card.addBookingListener(e -> {
-                        JFrame parent = (JFrame) SwingUtilities.getWindowAncestor(card);
-                        BookingDialog dialog = new BookingDialog(parent,card.venue.getId());
-                           dialog.setVisible(true);
-                     });
+                    card.addBookingListener((ActionEvent e) -> {
+                        BookingDialog bd = new BookingDialog();
+                        BookingController bc = new BookingController(bd,venue.getVenue_id(),userID);
+                        bc.open();
+                    });
+
                     
 
     }
@@ -94,4 +95,4 @@ class AddVenueListener implements ActionListener {
 
 }
 }
-    
+   
