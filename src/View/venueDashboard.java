@@ -81,6 +81,11 @@ public class venueDashboard extends javax.swing.JFrame {
         signOutBtn.setBackground(new java.awt.Color(0, 153, 153));
         signOutBtn.setForeground(new java.awt.Color(204, 255, 255));
         signOutBtn.setText("Sign Out");
+        signOutBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signOutBtnActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
         jLabel8.setText("Contact :");
@@ -307,6 +312,10 @@ public class venueDashboard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void signOutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signOutBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_signOutBtnActionPerformed
 
     /**
      * @param args the command line arguments

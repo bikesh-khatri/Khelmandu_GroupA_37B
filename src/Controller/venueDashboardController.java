@@ -115,16 +115,15 @@ public class venueDashboardController {
 
     }
 
-    private class signOut implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            LogIn loginPage = new LogIn();
-            logInController Controller = new logInController(loginPage);
-            Controller.open();
-        }
-
+private class signOut implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        LogIn loginPage = new LogIn();
+        logInController controller = new logInController(loginPage);
+        controller.open();
+        venueDashboardController.this.close();
     }
+}
 
     private class editAndSave implements ActionListener {
 

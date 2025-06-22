@@ -39,7 +39,6 @@ private int userID;
         name = new javax.swing.JLabel();
         location = new javax.swing.JLabel();
         price = new javax.swing.JLabel();
-        status = new javax.swing.JLabel();
         Bookbtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -52,8 +51,6 @@ private int userID;
         location.setText("jLabel3");
 
         price.setText("jLabel4");
-
-        status.setText("jLabel5");
 
         Bookbtn.setText("Book Venue");
 
@@ -68,7 +65,6 @@ private int userID;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Bookbtn)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(status, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                         .addComponent(price, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                         .addComponent(location, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -85,9 +81,7 @@ private int userID;
                         .addComponent(location)
                         .addGap(57, 57, 57)
                         .addComponent(price)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(status)
-                        .addGap(24, 24, 24)
+                        .addGap(52, 52, 52)
                         .addComponent(Bookbtn))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -103,7 +97,6 @@ private int userID;
     private javax.swing.JLabel location;
     private javax.swing.JLabel name;
     private javax.swing.JLabel price;
-    private javax.swing.JLabel status;
     // End of variables declaration//GEN-END:variables
  public void setVenue(){
         System.out.println(venue.getVenueName());

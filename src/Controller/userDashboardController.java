@@ -6,6 +6,7 @@ import View.BookingDialog;
 import View.User_Dashboard;
 import View.VenueCard;
 import View.BookingDialog;
+import View.LogIn;
 import View.User_profile;
 import View.rulesView;
 
@@ -39,6 +40,7 @@ public class userDashboardController {
         dashboardView.addBadmintonListener(new AddVenueListener("badminton"));
         dashboardView.profileListener(new showProfile());
         dashboardView.rulesListener(new showRules());
+        dashboardView.SignOutListener(new SignOut());
     }
 
     public void open() {
@@ -115,6 +117,15 @@ public class userDashboardController {
         }
 
     }
+    private class SignOut implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        LogIn loginPage = new LogIn();
+        logInController controller = new logInController(loginPage);
+        controller.open();
+        userDashboardController.this.close();
+    }
+}
 
     private void loadVenuesByType(String type) {
 

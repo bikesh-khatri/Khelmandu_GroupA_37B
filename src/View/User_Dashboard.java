@@ -34,10 +34,9 @@ public class User_Dashboard extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         rulesBtn = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        signOutbtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        HomeBtn = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         profileBtn = new javax.swing.JButton();
         FutsalVenue = new javax.swing.JButton();
@@ -66,14 +65,14 @@ public class User_Dashboard extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(204, 204, 204));
-        jButton7.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
-        jButton7.setText("Sign Out");
-        jButton7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jButton7.setBorderPainted(false);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        signOutbtn.setBackground(new java.awt.Color(204, 204, 204));
+        signOutbtn.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
+        signOutbtn.setText("Sign Out");
+        signOutbtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        signOutbtn.setBorderPainted(false);
+        signOutbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                signOutbtnActionPerformed(evt);
             }
         });
 
@@ -83,16 +82,6 @@ public class User_Dashboard extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
         jLabel1.setText("Welcome to Khelmandu");
-
-        HomeBtn.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
-        HomeBtn.setText("Home");
-        HomeBtn.setToolTipText("");
-        HomeBtn.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        HomeBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HomeBtnActionPerformed(evt);
-            }
-        });
 
         jTextField1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         jTextField1.setText("Search For Venue");
@@ -109,9 +98,7 @@ public class User_Dashboard extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(HomeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(266, 266, 266)
+                .addGap(361, 361, 361)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(123, 123, 123)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -123,10 +110,8 @@ public class User_Dashboard extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(13, 13, 13)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(HomeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(profileBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -203,7 +188,7 @@ public class User_Dashboard extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(61, 61, 61)
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(signOutbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(56, 56, 56)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,7 +223,7 @@ public class User_Dashboard extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                         .addComponent(rulesBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(signOutbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -250,10 +235,6 @@ public class User_Dashboard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void HomeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_HomeBtnActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
@@ -283,9 +264,9 @@ public class User_Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rulesBtnActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void signOutbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signOutbtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_signOutbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -297,9 +278,7 @@ public class User_Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton BasketballVenue;
     private javax.swing.JButton CricksalVenue;
     private javax.swing.JButton FutsalVenue;
-    private javax.swing.JButton HomeBtn;
     private javax.swing.JButton TabletenninsVenue;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -307,6 +286,7 @@ public class User_Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton profileBtn;
     private javax.swing.JButton rulesBtn;
+    private javax.swing.JButton signOutbtn;
     private javax.swing.JPanel venuePanel;
     // End of variables declaration//GEN-END:variables
     
@@ -339,6 +319,9 @@ public class User_Dashboard extends javax.swing.JFrame {
     
     public void rulesListener(ActionListener listener){
         rulesBtn.addActionListener(listener);
+    }
+    public void SignOutListener(ActionListener listener) {
+            signOutbtn.addActionListener(listener);
     }
     
 
