@@ -1,6 +1,7 @@
 package Dao;
 
-import java.sql.Connection;
+import java.sql.*;
+import java.sql.Statement;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,27 +20,43 @@ public class Dao {
 
     public boolean signup(Userdata user) {
         Connection conn = mysql.openConnection();
-        
-        String sql = "INSERT into users(f_name,l_name,ph_number,role,password) values(?,?,?,?,?)";
-        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        String sql = "INSERT INTO users(f_name, l_name, ph_number, role, password) VALUES (?, ?, ?, ?, ?)";
+        String venueSql = "INSERT INTO Venue(id) VALUES (?)";
+
+        try (PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+             PreparedStatement venueStmt = conn.prepareStatement(venueSql)) {
+            // Insert into users
             pstmt.setString(1, user.getF_name());
             pstmt.setString(2, user.getL_name());
             pstmt.setLong(3, user.getPh_number());
-            pstmt.setString(4,user.getRole());
+            pstmt.setString(4, user.getRole());
             pstmt.setString(5, user.getPassword());
+
             int rowsAffected = pstmt.executeUpdate();
+
             if (rowsAffected > 0) {
-                JOptionPane.showMessageDialog(null, "Registration Successful");
-                return true;
+                // Get the generated user ID
+                ResultSet rs = pstmt.getGeneratedKeys();
+                if (rs.next()) {
+                    int userId = rs.getInt(1);
+
+                    // Insert minimal row in Venue table
+                    venueStmt.setInt(1, userId);
+                    venueStmt.executeUpdate();
+
+                    JOptionPane.showMessageDialog(null, "Registration Successful");
+                    return true;
+                }
             } else {
                 JOptionPane.showMessageDialog(null, "Registration Failed");
-                return false;
             }
+
         } catch (SQLException ex) {
-            Logger.getLogger(Dao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VenueDao.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             mysql.closeConnection(conn);
         }
+
         return false;
     }
 
@@ -74,7 +91,6 @@ public class Dao {
             ResultSet rs = pstm.executeQuery(); 
 
             if (rs.next()) {
-                // Login successful
                 
                 JOptionPane.showMessageDialog(null, "Login successful");
                 return rs.getInt("id");

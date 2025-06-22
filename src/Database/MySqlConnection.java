@@ -22,7 +22,7 @@ String username = "root";
 
 String password = "bikki123";
 
-String database = "bhatbhateni";
+String database = "khelmandu";
 
 Connection connection;
 

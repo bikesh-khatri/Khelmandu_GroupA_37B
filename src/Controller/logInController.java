@@ -6,10 +6,8 @@ package Controller;
 
 
 import Dao.Dao;
-
-import View.LogIn;
-import View.User_Dashboard;
-
+import View.*;
+import Controller.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -53,17 +51,32 @@ public class logInController {
                     JOptionPane.showMessageDialog(null, "Password is required.");
                     return;
                 }
-               int id = userDao.logIn(phno, password);
-               if(id != 0){
-                   if(userDao.checkuser(Long.parseLong(phno)).equals("Player")){
-                       
-                       User_Dashboard  dashboard = new User_Dashboard(id);
-                        userDashboardController c = new userDashboardController(dashboard);
-                        c.open();
-                        close();
-                   }
-                   
+               String role = userDao.checkuser(Long.parseLong(phno));
+               if(role.equals("null")){
+                   JOptionPane.showMessageDialog(userView, "Invalid Credentials");
+                   return;
                }
+               
+               int id = userDao.logIn(phno, password);
+               if (role.equals("Admin")){
+                   System.out.println("role is admin");
+                   venueDashboard dashboard = new venueDashboard();
+                   System.out.println("view called");
+                   venueDashboardController c = new venueDashboardController(dashboard,id);
+                   System.out.println("controlled called");
+                   c.open();
+                   close();
+                   
+               }else if (role.equals("Player")){
+                   System.out.println("role is admin");
+                   User_Dashboard dashboard = new User_Dashboard(id);
+                   System.out.println("view called");
+                   userDashboardController c = new userDashboardController(dashboard, id);
+                   c.open();
+                   close();
+               }
+               
+              
                 
             } catch (Exception ex) {
                 System.out.println("Error Loggig user: " + ex.getMessage());
