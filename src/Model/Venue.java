@@ -97,13 +97,12 @@ public class Venue {
         this.venueContact = venueContact;
     }
 
-   public Venue(String venueName,String venueImage,String venueStatus, String venueLocation, int venuePrice, int venue_id){
+   public Venue(String venueName,String venueImage, String venueLocation, int venuePrice, int venue_id){
       this.venueImage = venueImage;
       this.venueLocation = venueLocation;
       this.venueName = venueName;
-      this.venueStatus = venueStatus;
       this.venuePrice = venuePrice;
-      this.venue_id = venue_id;
+      this.id = venue_id;
    }
 }
 

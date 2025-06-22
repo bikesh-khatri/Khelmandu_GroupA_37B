@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import Dao.VenueDao;
+import Dao.*;
 import Model.*;
 import View.*;
 import java.awt.Image;
@@ -18,47 +18,50 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
-
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author thismac
  */
 public class venueDashboardController {
+
     private final VenueDao vDao = new VenueDao();
+    private final BookingDao bDao = new BookingDao();
     private final venueDashboard dashboard;
     private final int id;
     private Userdata user;
     private Venue venue;
-     private static final String UPLOAD_DIR = "Images";
-    
-    public venueDashboardController(venueDashboard dashboard, int id){
+    private static final String UPLOAD_DIR = "Images";
+
+    public venueDashboardController(venueDashboard dashboard, int id) {
         this.dashboard = dashboard;
         this.id = id;
         this.dashboard.addEditListener(new editAndSave());
         this.dashboard.imageClickListener(new addImage());
+        this.dashboard.signOutListener(new signOut());
         new File(UPLOAD_DIR).mkdirs();
         getSet();
     }
-    
-    public void open(){
+
+    public void open() {
         this.dashboard.setVisible(true);
     }
-    
-    public void close(){
+
+    public void close() {
         this.dashboard.setVisible(false);
     }
-    
-    
-    public void getSet(){
+
+    public void getSet() {
         user = vDao.getUserById(id);
         venue = vDao.getVenueById(id);
-        
+
         dashboard.VenueName.setText(venue.getVenueName());
         dashboard.venueName.setText(venue.getVenueName());
         dashboard.venueDescription.setText(venue.getVenueDecription());
@@ -66,67 +69,82 @@ public class venueDashboardController {
         dashboard.venueLocation.setText(venue.getVenueLocation());
         dashboard.venuePrice.setText(Integer.toString(venue.getVenuePrice()));
         dashboard.venueType.setSelectedItem(venue.getVenueType());
-        
+
         String path = venue.getVenueImage();
         if (path != null && !path.isEmpty()) {
             try {
                 ImageIcon icon = new ImageIcon(path);
                 dashboard.VenueIcon.setIcon(icon);
             } catch (Exception e) {
-               
+
             }
-        } 
+        }
+
+        DefaultTableModel model = (DefaultTableModel) dashboard.bookingTable.getModel();
+        model.setRowCount(0);
+
+        ArrayList<String[]> bookings = bDao.getAllBookingsForDashboard(venue.getId());
+        for (String[] row : bookings) {
+            model.addRow(row);
+        }
     }
-    
-    public void updateInfo(){
+
+    public void updateInfo() {
         venue.setVenueName(dashboard.venueName.getText());
         venue.setVenueDecription(dashboard.venueDescription.getText());
         venue.setVenueContact(Long.parseLong(dashboard.venueContact.getText()));
         venue.setVenueLocation(dashboard.venueLocation.getText());
         venue.setVenuePrice(Integer.parseInt(dashboard.venuePrice.getText()));
         venue.setVenueType((String) dashboard.venueType.getSelectedItem());
-        if(vDao.updateVenue(venue)){
-            JOptionPane.showMessageDialog(dashboard,"Updated Sucessfully");
+        if (vDao.updateVenue(venue)) {
+            JOptionPane.showMessageDialog(dashboard, "Updated Sucessfully");
             getSet();
+        } else {
+            JOptionPane.showMessageDialog(dashboard, "Could not Update");
         }
-        else{
-            JOptionPane.showMessageDialog(dashboard,"Could not Update");
-        }
-    
+
     }
-    
-    public void setEditable(boolean edit){
+
+    public void setEditable(boolean edit) {
         dashboard.venueName.setEditable(edit);
         dashboard.venueDescription.setEditable(edit);
         dashboard.venueContact.setEditable(edit);
         dashboard.venueLocation.setEditable(edit);
         dashboard.venuePrice.setEditable(edit);
         dashboard.venueType.setEditable(edit);
-        
-                
+
     }
 
- 
+    private class signOut implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            LogIn loginPage = new LogIn();
+            logInController Controller = new logInController(loginPage);
+            Controller.open();
+        }
+
+    }
 
     private class editAndSave implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-           String bLabel = dashboard.editBtn.getText();
-           if(bLabel.equals("Edit")){
-               dashboard.editBtn.setText("Save");
-               setEditable(true);
-           }else{
-               updateInfo();
-               dashboard.editBtn.setText("Edit");
-               setEditable(false);
-               
-           }
+            String bLabel = dashboard.editBtn.getText();
+            if (bLabel.equals("Edit")) {
+                dashboard.editBtn.setText("Save");
+                setEditable(true);
+            } else {
+                updateInfo();
+                dashboard.editBtn.setText("Edit");
+                
+                setEditable(false);
+
+            }
         }
-        
+
     }
-    
-            
+
     private class addImage extends MouseAdapter {
 
         @Override
@@ -147,7 +165,7 @@ public class venueDashboardController {
                     File outputFile = destination.toFile();
                     ImageIO.write(resizedImage, "png", outputFile);
                     venue.setVenueImage(destination.toString());
-                    
+
                     ImageIcon icon = new ImageIcon(destination.toString());
                     dashboard.VenueIcon.setIcon(icon);
 

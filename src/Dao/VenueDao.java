@@ -28,8 +28,9 @@ public class VenueDao {
                 long ph_number = rs.getLong("ph_number");
                 String role = rs.getString("role");
                 String password = rs.getString("password");
-
+                
                 user = new Userdata(f_name, l_name, ph_number, role, password);
+                user.setId(rs.getInt("id"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -127,6 +128,27 @@ public class VenueDao {
         }
 
         return false;
+    }
+    
+    public ArrayList<String> getRulesByGame(String game) {
+        ArrayList<String> rulesList = new ArrayList<>();
+        String sql = "SELECT rule FROM rules WHERE game = ?";
+        Connection conn = mysql.openConnection();
+
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, game);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                rulesList.add(rs.getString("rule"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Handle logging or rethrow as needed
+        }
+
+        return rulesList;
     }
 
 }

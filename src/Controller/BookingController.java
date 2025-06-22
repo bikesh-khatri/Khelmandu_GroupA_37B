@@ -16,6 +16,7 @@ import java.sql.Time;
 import java.time.LocalDate;
 
 import javax.swing.JOptionPane;
+import javax.swing.JSpinner;
 
 public class BookingController {
 
@@ -30,6 +31,7 @@ public class BookingController {
     this.userId = userId;
     this.bookingDAO = new BookingDao(); // FIXED
     this.dialog.addBookBtnListener(new BookingListener());
+    
 }
 
     
@@ -49,18 +51,23 @@ public class BookingController {
             try {
                 
                 Date selectedDate = (Date) dialog.getSelectedDate();
+                System.out.println(dialog.getSelectedDate().toString());
                 String timeSlot = dialog.getSelectedTimeSlot();
                 String paymentMethod = dialog.getSelectedPaymentMethod();
                 Booking booking = new Booking(venueId, selectedDate, timeSlot, paymentMethod, userId);
-
+                if(bookingDAO.isAvailable(booking)){
                 boolean success = bookingDAO.insertBooking(booking);
-                boolean check = bookingDAO.changeStatus(booking);
-                if (success && check){
+                
+                if (success ){
                         JOptionPane.showMessageDialog(dialog,"Booking successful!");
                         dialog.dispose(); // close dialog}
                 } 
                 else {
                     JOptionPane.showMessageDialog(dialog,"Booking failed.");
+                }
+                }
+                else{
+                    JOptionPane.showMessageDialog(dialog, "UnAvailable for this Time");
                 }
 
             } catch (Exception ex) {
