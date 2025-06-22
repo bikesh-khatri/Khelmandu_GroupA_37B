@@ -34,7 +34,7 @@ public class Dao {
 
             int rowsAffected = pstmt.executeUpdate();
 
-            if (rowsAffected > 0) {
+            if (rowsAffected > 0 && user.getRole().equals("Admin")) {
                 // Get the generated user ID
                 ResultSet rs = pstmt.getGeneratedKeys();
                 if (rs.next()) {
@@ -44,12 +44,15 @@ public class Dao {
                     venueStmt.setInt(1, userId);
                     venueStmt.executeUpdate();
 
-                    JOptionPane.showMessageDialog(null, "Registration Successful");
+                    JOptionPane.showMessageDialog(null, "Admin Registration Successful");
                     return true;
                 }
-            } else {
-                JOptionPane.showMessageDialog(null, "Registration Failed");
+            } 
+            else if(rowsAffected > 0){
+                JOptionPane.showMessageDialog(null, "Player Registration Successful");
+                    return true;
             }
+            
 
         } catch (SQLException ex) {
             Logger.getLogger(VenueDao.class.getName()).log(Level.SEVERE, null, ex);
@@ -108,6 +111,31 @@ public class Dao {
         }
         return 0;
     }
+
+    public boolean updateUser(Userdata user) {
+        String sql = "UPDATE users SET f_name = ?, l_name = ?, ph_number = ?, password = ? WHERE id = ?";
+        Connection conn = mysql.openConnection();
+            
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            
+            stmt.setString(1, user.getF_name());
+            stmt.setString(2, user.getL_name());
+            stmt.setLong(3, user.getPh_number());
+            stmt.setString(4, user.getPassword());
+            stmt.setInt(5, user.getId());
+
+            int rowsAffected = stmt.executeUpdate();
+            return rowsAffected > 0;
+
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            ex.printStackTrace();
+            return false;
+
+        } finally {
+            mysql.closeConnection(conn);
+        }
+    }
     
         // Fetch password for a user by ID
     public String getPasswordById(int userId) {
@@ -144,4 +172,24 @@ public class Dao {
     }
 
     
+}
+    public boolean deleteUserById(int userId) {
+        String sql = "DELETE FROM users WHERE id = ?";
+        Connection conn = mysql.openConnection();
+
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, userId);
+
+            int rowsAffected = stmt.executeUpdate();
+            return rowsAffected > 0;
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return false;
+
+        } finally {
+            mysql.closeConnection(conn);
+        }
+    }
+
 }

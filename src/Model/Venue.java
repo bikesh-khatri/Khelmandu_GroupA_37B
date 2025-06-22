@@ -97,5 +97,12 @@ public class Venue {
         this.venueContact = venueContact;
     }
 
-
+   public Venue(String venueName,String venueImage, String venueLocation, int venuePrice, int venue_id){
+      this.venueImage = venueImage;
+      this.venueLocation = venueLocation;
+      this.venueName = venueName;
+      this.venuePrice = venuePrice;
+      this.id = venue_id;
+   }
 }
+

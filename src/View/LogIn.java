@@ -102,12 +102,14 @@ public class LogIn extends javax.swing.JFrame {
         jLabel2.setText("Phone Number");
 
         number.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-       
+        number.setText("9800000014");
+        
+
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(200, 200, 200));
         jLabel3.setText("Password");
 
-        pass.setText("jPasswordField1");
+        pass.setText("abcd");
 
         logInBtn.setBackground(new java.awt.Color(149, 165, 166));
         logInBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N

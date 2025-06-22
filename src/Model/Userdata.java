@@ -9,6 +9,7 @@ package Model;
  * @author khatr
  */
 public class Userdata {
+    private int id;
     private String f_name;
     private String l_name;
     private long ph_number;
@@ -23,6 +24,15 @@ public class Userdata {
         this.password = password;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    
     public String getF_name() {
         return f_name;
     }

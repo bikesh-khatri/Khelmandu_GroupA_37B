@@ -4,7 +4,7 @@
  */
 package Model;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 /**
  *
@@ -12,6 +12,15 @@ import java.time.LocalDate;
  */
 public class Booking {
     private int user_id;
+    
+    public Booking(int venue_id,Date bookingDate, String timeSlot, String paymentType, int user_id) {
+        this.venue_id = venue_id;
+        this.bookingDate = bookingDate;
+        this.timeSlot = timeSlot;
+        this.paymentType = paymentType;
+        this.user_id = user_id;
+    }
+    
      public int getUser_id() {
         return user_id;
     }
@@ -27,11 +36,11 @@ public class Booking {
          this.venue_id = venue_id;
      }
 
-    private LocalDate bookingDate;
-    public LocalDate getBookingDate() {
+    private Date bookingDate;
+    public Date getBookingDate() {
         return bookingDate;
     }
-    public void setBookingDate(LocalDate bookingDate) {
+    public void setBookingDate(Date bookingDate) {
         this.bookingDate = bookingDate;
     }
 
@@ -52,10 +61,5 @@ public class Booking {
         this.paymentType = paymentType;
     }
 
-    public Booking(int venue_id, LocalDate bookingDate, String timeSlot, String paymentType) {
-        this.venue_id = venue_id;
-        this.bookingDate = bookingDate;
-        this.timeSlot = timeSlot;
-        this.paymentType = paymentType;
-    }
+
 }
