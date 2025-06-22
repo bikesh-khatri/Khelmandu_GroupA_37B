@@ -5,16 +5,22 @@
         <group>
             <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/View/User_Dashboard.java</file>
             <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/View/LogIn.java</file>
-            <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/View/deleteacc.java</file>
             <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/View/SignUp.java</file>
             <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/View/Venues.form</file>
             <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/Database/MySqlConnection.java</file>
             <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/View/User_profile.java</file>
-            <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/Dao/BookingDao.java</file>
             <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/Controller/logInController.java</file>
             <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/Database/khelmandu.sql</file>
             <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/Dao/Dao.java</file>
+            <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/View/VenueCard.java</file>
+            <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/View/venueDashboard.java</file>
+            <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/Controller/UserProfileController.java</file>
+            <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/Controller/userDashboardController.java</file>
+            <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/View/BookingDialog.java</file>
+            <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/View/deleteacc.java</file>
             <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/View/userDao.java</file>
+            <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/BookingHistory.java</file>
+            <file>file:/C:/Users/Yuvaraj.N.Chaudhary/Documents/NetBeansProjects/Khelmandu_GroupA_37B/src/Controller/venueDashboardController.java</file>
         </group>
     </open-files>
 </project-private>
