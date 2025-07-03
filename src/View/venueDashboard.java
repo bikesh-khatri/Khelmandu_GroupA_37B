@@ -22,6 +22,7 @@ public class venueDashboard extends javax.swing.JFrame {
         venueType.addItem("Criksal");
         venueType.addItem("Badminton");
         venueType.addItem("BasketBall");
+        venueType.addItem("TableTennis");
        
         
     }

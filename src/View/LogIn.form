@@ -155,8 +155,8 @@
                               <Component id="jLabel6" min="-2" pref="203" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
-                              <Component id="gotoSignUp" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                              <Component id="gotoSignup" min="-2" pref="111" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="25" max="32767" attributes="0"/>
@@ -181,8 +181,8 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="logInBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="gotoSignUp" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="83" max="32767" attributes="0"/>
+                      <Component id="gotoSignup" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="80" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -215,7 +215,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="9800000014"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numberActionPerformed"/>
@@ -233,9 +232,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JPasswordField" name="pass">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="abcd"/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="logInBtn">
               <Properties>
@@ -263,15 +259,15 @@
                 <Property name="text" type="java.lang.String" value="Sign in to your Khelmandu account "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="gotoSignUp">
+            <Component class="javax.swing.JLabel" name="gotoSignup">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="New ? Register here"/>
+                <Property name="text" type="java.lang.String" value="sd ffyuf fugiu"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="gotoSignUpMouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="gotoSignupMouseClicked"/>
               </Events>
             </Component>
           </SubComponents>

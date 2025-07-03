@@ -18,6 +18,7 @@ public class LogIn extends javax.swing.JFrame {
      */
     public LogIn() {
         initComponents();
+         
     }
 
     /**
@@ -42,7 +43,7 @@ public class LogIn extends javax.swing.JFrame {
         pass = new javax.swing.JPasswordField();
         logInBtn = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        gotoSignUp = new javax.swing.JLabel();
+        gotoSignup = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,29 +103,26 @@ public class LogIn extends javax.swing.JFrame {
         jLabel2.setText("Phone Number");
 
         number.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        number.setText("9800000014");
         
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(200, 200, 200));
         jLabel3.setText("Password");
 
-        pass.setText("abcd");
-
         logInBtn.setBackground(new java.awt.Color(149, 165, 166));
         logInBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         logInBtn.setForeground(new java.awt.Color(255, 255, 255));
         logInBtn.setText("Login");
-       
+        
 
         jLabel6.setForeground(new java.awt.Color(200, 200, 200));
         jLabel6.setText("Sign in to your Khelmandu account ");
 
-        gotoSignUp.setForeground(new java.awt.Color(255, 255, 255));
-        gotoSignUp.setText("New ? Register here");
-        gotoSignUp.addMouseListener(new java.awt.event.MouseAdapter() {
+        gotoSignup.setForeground(new java.awt.Color(255, 255, 255));
+        gotoSignup.setText("sd ffyuf fugiu");
+        gotoSignup.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                gotoSignUpMouseClicked(evt);
+                gotoSignupMouseClicked(evt);
             }
         });
 
@@ -149,8 +147,8 @@ public class LogIn extends javax.swing.JFrame {
                         .addGap(40, 40, 40)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(LeftLayout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(gotoSignUp)))
+                        .addGap(73, 73, 73)
+                        .addComponent(gotoSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         LeftLayout.setVerticalGroup(
@@ -171,8 +169,8 @@ public class LogIn extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(logInBtn)
                 .addGap(18, 18, 18)
-                .addComponent(gotoSignUp)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addComponent(gotoSignup)
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         jPanel1.add(Left);
@@ -192,56 +190,24 @@ public class LogIn extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void gotoSignUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gotoSignUpMouseClicked
+    private void gotoSignupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gotoSignupMouseClicked
         SignUp regForm = new SignUp();
         controller c = new controller(regForm);
         c.open();
         dispose();
-                
-    }//GEN-LAST:event_gotoSignUpMouseClicked
+    }//GEN-LAST:event_gotoSignupMouseClicked
 
     
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LogIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LogIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LogIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LogIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new LogIn().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Left;
     private javax.swing.JPanel Right;
-    private javax.swing.JLabel gotoSignUp;
+    private javax.swing.JLabel gotoSignup;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -40,13 +40,19 @@ public class User_profile extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         Last_name = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(26, 60, 52));
+
+        jLabel1.setForeground(new java.awt.Color(220, 220, 220));
         jLabel1.setText("First Name:");
 
+        jLabel2.setForeground(new java.awt.Color(220, 220, 220));
         jLabel2.setText("Phone Number:");
 
+        jLabel3.setForeground(new java.awt.Color(220, 220, 220));
         jLabel3.setText("Password:");
 
         Edit.setBackground(new java.awt.Color(0, 255, 51));
+        Edit.setForeground(new java.awt.Color(220, 220, 220));
         Edit.setText("Edit");
         Edit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,6 +61,7 @@ public class User_profile extends javax.swing.JPanel {
         });
 
         Delete.setBackground(new java.awt.Color(255, 0, 0));
+        Delete.setForeground(new java.awt.Color(220, 220, 220));
         Delete.setText("Delete Account");
         Delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,6 +69,7 @@ public class User_profile extends javax.swing.JPanel {
             }
         });
 
+        Profile_pic.setForeground(new java.awt.Color(220, 220, 220));
         Profile_pic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Profile_pic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Profilelogo.png"))); // NOI18N
         Profile_pic.setPreferredSize(new java.awt.Dimension(100, 50));
@@ -82,6 +90,7 @@ public class User_profile extends javax.swing.JPanel {
             }
         });
 
+        jLabel4.setForeground(new java.awt.Color(220, 220, 220));
         jLabel4.setText("Last Name:");
 
         Last_name.setEditable(false);
